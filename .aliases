@@ -1,3 +1,4 @@
+# Aliases
 # Navigation
 alias cds="cd ~/Sites/"
 alias cdp="cd ~/Projects/"
@@ -18,12 +19,17 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Copy my ssh pub key
 alias cpssh='cat ~/.ssh/id_ed25519.pub | pbcopy && cat ~/.ssh/id_ed25519.pub'
-
+alias cpsshgen='echo "ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519" | pbcopy'
 # Docker
 alias dup='docker-compose up -d'
 alias ddown='docker-compose down'
 
-alias dontsleep="pmset noidle"
-
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
+
+# Misc
+alias free="df -P -kHl"
+alias dontsleep="pmset noidle"
+alias cam="cd ~/Desktop && ./cam.sh"
+alias restartbrowser="adb shell am force-stop com.oculus.browser"
+alias npmlsg="npm ls -g --depth=0"
