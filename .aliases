@@ -9,17 +9,18 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Edit some commonly used files
-alias nalias="nano ~/.bash_profile"
+alias nalias="nano ~/.aliases"
 alias nhosts="sudo nano /etc/hosts"
 alias nssh="nano ~/.ssh/config"
 
 # Get my Ip
 alias mip='ipconfig getifaddr en1 | pbcopy && ipconfig getifaddr en1'
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Copy my ssh pub key
 alias cpssh='cat ~/.ssh/id_ed25519.pub | pbcopy && cat ~/.ssh/id_ed25519.pub'
 alias cpsshgen='echo "ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519" | pbcopy'
+
 # Docker
 alias dup='docker-compose up -d'
 alias ddown='docker-compose down'
@@ -30,6 +31,5 @@ alias undopush="git push -f origin HEAD^:master"
 # Misc
 alias free="df -P -kHl"
 alias dontsleep="pmset noidle"
-alias cam="cd ~/Desktop && ./cam.sh"
 alias restartbrowser="adb shell am force-stop com.oculus.browser"
 alias npmlsg="npm ls -g --depth=0"

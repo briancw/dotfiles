@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/brian/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,6 +56,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins+=(zsh-better-npm-completion) # Better NPM npm completions
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,16 +64,15 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Aliases
 source ~/.aliases
 
 # fnm
 export PATH=/Users/brian/.fnm:$PATH
 eval "`fnm env --multi`"
+
+#adb
+export PATH=$PATH:~/.android-sdk-macosx/platform-tools/
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
