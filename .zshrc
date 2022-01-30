@@ -76,3 +76,6 @@ export PATH=$PATH:~/.android-sdk-macosx/platform-tools/
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Better NPM npm completions
+plugins+=(zsh-better-npm-completion)
