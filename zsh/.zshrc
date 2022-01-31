@@ -36,4 +36,4 @@ plugins+=(zsh-better-npm-completion) # Better NPM npm completions
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-source ~/.dotfiles/.aliases
+source ~/.aliases
