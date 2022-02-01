@@ -1,4 +1,4 @@
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -30,10 +30,17 @@ setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately aft
 setopt EXTENDED_HISTORY  # record command start time
 
 # Plugins
-plugins=(git)
-plugins+=(zsh-better-npm-completion) # Better NPM npm completions
+#plugins=(git)
+#plugins+=(zsh-better-npm-completion) # Better NPM npm completions
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+
+# Antibody Plugins
+source ~/.zsh_plugins.sh
+
+# P10k
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
-source ~/.dotfiles/.aliases
+source ~/.aliases
