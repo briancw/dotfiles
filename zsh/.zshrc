@@ -1,5 +1,3 @@
-#ZSH_THEME="powerlevel10k/powerlevel10k"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -28,12 +26,6 @@ setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
 setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 setopt EXTENDED_HISTORY  # record command start time
-
-# Plugins
-#plugins=(git)
-#plugins+=(zsh-better-npm-completion) # Better NPM npm completions
-
-#source $ZSH/oh-my-zsh.sh
 
 # Antibody Plugins
 source ~/.zsh_plugins.sh
