@@ -2,7 +2,7 @@
 # export ZSH="~/.oh-my-zsh"
 
 # fnm
-export PATH=/Users/brian/.fnm:$PATH
+export PATH=$HOME/.fnm:$PATH
 eval "`fnm env --multi`"
 
 #adb
