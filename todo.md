@@ -1,0 +1,1 @@
+Reduce grub timeout in opensuse
