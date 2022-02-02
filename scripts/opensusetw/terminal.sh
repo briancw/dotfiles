@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Install ZSH
-echo -e "\e[1;34m \n\n *** Install ZSH *** \e[0m"
-sudo zypper install -y zsh
-
 # Symlink dot files into home directory
 # Consider replacing this with gnu-stow
 echo -e "\e[1;34m \n\n *** Symlink dotfiles *** \e[0m"
@@ -16,9 +12,9 @@ ln -s ~/.dotfiles/npm/.npmrc ~/.npmrc
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
 
-# Install FNM
-echo -e "\e[1;34m \n\n *** Install FNM *** \e[0m"
-curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+# Install ZSH
+echo -e "\e[1;34m \n\n *** Install ZSH *** \e[0m"
+sudo zypper install -y zsh
 
 # Install AntiBody
 echo -e "\e[1;34m \n\n *** Install AntiBody *** \e[0m"

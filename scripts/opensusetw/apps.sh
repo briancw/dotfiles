@@ -56,3 +56,11 @@ com.obsproject.Studio \
 io.github.shiftey.Desktop \
 org.signal.Signal
 # org.libreoffice.LibreOffice \
+
+# Uninstall KDE's Discover
+echo -e "\e[1;34m \n\n *** Uninstall KDE Discover *** \e[0m"
+sudo zypper remove -y discover
+
+# Install FNM
+echo -e "\e[1;34m \n\n *** Install FNM *** \e[0m"
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
