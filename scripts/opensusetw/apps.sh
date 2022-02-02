@@ -2,10 +2,8 @@
 sudo zyyper ref
 sudo zypper update -y
 
-# Extra non free software repo
+# Add Packman repository for non free software, particularly codecs
 sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
-sudo zypper dup -y --from packman --allow-vendor-change
-
 # Switch some installed software to the non free repo
 sudo zypper --non-interactive --no-gpg-checks dup --from packman --allow-vendor-change
 
@@ -54,7 +52,3 @@ com.obsproject.Studio \
 io.github.shiftey.Desktop \
 org.signal.Signal
 # org.libreoffice.LibreOffice \
-
-# Install 1password from an RPM
-# Requires user interaction
-sudo zypper install https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm
