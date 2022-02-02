@@ -30,6 +30,7 @@ code \
 vlc \
 brave-browser \
 dropbox \
+python3-pip \
 powerline-fonts
 
 # Remove default libre install

@@ -1,3 +1,7 @@
+#!/bin/bash
+sudo dnf update -y
+
+# Install ZSH
 sudo dnf install -y zsh
 
 # Symlink dot files into home directory
