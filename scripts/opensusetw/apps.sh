@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo zyyper ref
+sudo zypper ref
 sudo zypper update -y
 
 # Add Packman repository for non free software, particularly codecs
