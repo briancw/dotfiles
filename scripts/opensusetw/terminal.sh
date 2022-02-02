@@ -1,8 +1,8 @@
 #!/bin/bash
-sudo dnf update -y
+sudo zypper update -y
 
 # Install ZSH
-sudo dnf install -y zsh
+sudo zypper install -y zsh
 
 # Symlink dot files into home directory
 # Consider replacing this with gnu-stow
