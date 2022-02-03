@@ -20,6 +20,8 @@ sudo zypper addrepo https://brave-browser-rpm-release.s3.brave.com/x86_64/ brave
 echo -e "\e[1;34m \n\n *** Add flathub flatpak repo *** \e[0m"
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+sudo zypper ref
+
 # Install some required media codecs
 echo -e "\e[1;34m \n\n *** Install media codecs *** \e[0m"
 sudo zypper install -y \
@@ -58,8 +60,13 @@ com.spotify.Client org.freecadweb.FreeCAD \
 com.discordapp.Discord \
 com.obsproject.Studio \
 io.github.shiftey.Desktop \
-org.signal.Signal
+org.signal.Signal \
+cc.arduino.arduinoide
 # org.libreoffice.LibreOffice \
+
+# Add required arduino permission
+echo -e "\e[1;34m \n\n *** Add Arduino Permission *** \e[0m"
+sudo usermod -a -G dialout,lock $USER
 
 # Uninstall KDE's Discover
 #echo -e "\e[1;34m \n\n *** Uninstall KDE Discover *** \e[0m"
@@ -68,3 +75,4 @@ org.signal.Signal
 # Install FNM
 echo -e "\e[1;34m \n\n *** Install FNM *** \e[0m"
 curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+
