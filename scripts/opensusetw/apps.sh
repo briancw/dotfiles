@@ -43,7 +43,10 @@ brave-browser \
 dropbox \
 python3-pip \
 filelight \
-powerline-fonts
+powerline-fonts \
+make \
+gcc \
+gcc-c++
 
 # Remove default libre install
 # sudo zypper remove -y libreoffice*
@@ -59,8 +62,8 @@ org.signal.Signal
 # org.libreoffice.LibreOffice \
 
 # Uninstall KDE's Discover
-echo -e "\e[1;34m \n\n *** Uninstall KDE Discover *** \e[0m"
-sudo zypper remove -y discover
+#echo -e "\e[1;34m \n\n *** Uninstall KDE Discover *** \e[0m"
+#sudo zypper remove -y discover
 
 # Install FNM
 echo -e "\e[1;34m \n\n *** Install FNM *** \e[0m"
