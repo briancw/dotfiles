@@ -16,7 +16,8 @@ freecad \
 qemu virt-manager vde2 bridge-utils openbsd-netcat edk2-ovmf swtpm \
 peek \
 cups print-manager system-config-printer \
-skanlite
+skanlite \
+tmux
 
 # Install apps from AUR
 echo -e "\e[1;34m \n\n *** Install Apps from AUR *** \e[0m"

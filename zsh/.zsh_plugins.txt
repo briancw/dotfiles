@@ -1,7 +1,0 @@
-robbyrussell/oh-my-zsh
-romkatv/powerlevel10k
-zsh-users/zsh-completions
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-history-substring-search
-zsh-users/zsh-autosuggestions
-lukechilds/zsh-better-npm-completion

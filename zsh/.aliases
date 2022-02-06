@@ -33,6 +33,3 @@ alias free="df -P -kHl"
 alias dontsleep="pmset noidle"
 alias restartbrowser="adb shell am force-stop com.oculus.browser"
 alias npmlsg="npm ls -g --depth=0"
-
-# Antibody
-alias genplugins="antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh"

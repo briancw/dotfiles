@@ -14,11 +14,3 @@ echo -e "\e[1;34m \n\n *** Symlink dotfiles *** \e[0m"
 stow zsh
 stow git
 stow npm
-
-# Install AntiBody
-echo -e "\e[1;34m \n\n *** Install AntiBody *** \e[0m"
-curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin
-
-# Bundle ZSH plugins with antibody
-echo -e "\e[1;34m \n\n *** Bundle ZSH Plugins *** \e[0m"
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
