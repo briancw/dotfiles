@@ -9,7 +9,7 @@ curl -sS https://mullvad.net/media/mullvad-code-signing.asc | gpg --import
 echo -e "\e[1;34m \n\n *** Install Apps from pacman *** \e[0m"
 sudo pacman -S --noconfirm --needed \
 brave-browser \
-signal-desktop \
+vivaldi \
 code \
 mpv \
 freecad \
@@ -17,7 +17,8 @@ qemu virt-manager vde2 bridge-utils openbsd-netcat edk2-ovmf swtpm \
 peek \
 cups print-manager system-config-printer \
 skanlite \
-tmux
+tmux \
+dog
 
 # Install apps from AUR
 echo -e "\e[1;34m \n\n *** Install Apps from AUR *** \e[0m"
