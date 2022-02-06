@@ -30,9 +30,10 @@ echo -e "\e[1;34m \n\n *** Install FNM *** \e[0m"
 sudo pacman -S --noconfirm --needed unzip
 curl -fsSL https://fnm.vercel.app/install | sh -s -- --skip-shell
 
+// TODO Need to activate FNM before it can be used
 # Install current LTS Node
-echo -e "\e[1;34m \n\n *** Install Node Stable *** \e[0m"
-fnm install --lts
+#echo -e "\e[1;34m \n\n *** Install Node Stable *** \e[0m"
+#fnm install --lts
 
 # Enable virtualization service
 sudo usermod -a -G libvirt $USER
