@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo -e "\e[1;36m \n\n *** Baseline Update *** \e[0m"
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 echo -e "\e[1;36m \n\n *** Setup System *** \e[0m"
 sh ./scripts/manjaro/system.sh
