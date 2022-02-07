@@ -14,3 +14,6 @@ sh ./scripts/manjaro/apps.sh
 
 echo -e "\e[1;36m \n\n *** Uninstall some default Apps *** \e[0m"
 sh ./scripts/manjaro/debloat.sh
+
+echo -e "\e[1;36m \n\n *** Setup looks *** \e[0m"
+sh ./scripts/manjaro/looks.sh

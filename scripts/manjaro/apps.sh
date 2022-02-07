@@ -18,7 +18,10 @@ peek \
 cups print-manager system-config-printer \
 skanlite \
 tmux \
-dog
+dog \
+python-pip \
+docker \
+baobab
 
 # Install apps from AUR
 echo -e "\e[1;34m \n\n *** Install Apps from AUR *** \e[0m"
@@ -43,6 +46,10 @@ sudo systemctl enable --now libvirtd.service
 sudo systemctl enable --now virtlogd.service
 # Possibly needed to autostart network, but may not work here
 # sudo virsh net-autostart --network default
+
+# Enable Docker
+sudo usermod -aG docker $USER
+sudo systemctl enable docker.service
 
 # Enable printer services
 sudo systemctl enable --now cups
