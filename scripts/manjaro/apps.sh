@@ -1,12 +1,14 @@
 #!/bin/sh
 
-# Import GPG keys
-echo -e "\e[1;34m \n\n *** Import keys *** \e[0m"
+stepcolor="\e[1;34m"
+nocolor="\e[0m"
+
+echo -e "${stepcolor} \n\n *** Import keys *** ${nocolor}"
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
 curl -sS https://mullvad.net/media/mullvad-code-signing.asc | gpg --import
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | gpg --import
 
-# Install Apps
-echo -e "\e[1;34m \n\n *** Install Apps from pacman *** \e[0m"
+echo -e "${stepcolor} \n\n *** Install Apps from pacman *** ${nocolor}"
 sudo pacman -S --noconfirm --needed \
 brave-browser \
 vivaldi \
@@ -21,36 +23,35 @@ tmux \
 dog \
 python-pip \
 docker \
-baobab
+filelight \
+obs-studio
 
-# Install apps from AUR
-echo -e "\e[1;34m \n\n *** Install Apps from AUR *** \e[0m"
-pamac build skanpage --no-confirm
-pamac build github-desktop-bin --no-confirm
-pamac build 1password --no-confirm
-pamac build mullvad-vpn-bin --no-confirm
+echo -e "${stepcolor} \n\n *** Install Apps from AUR *** ${nocolor}"
+pamac build --no-firm \
+skanpage \
+github-desktop-bin \
+1password \
+mullvad-vpn-bin \
+spotify \
+fnm-bin
 
-# Install FNM
-echo -e "\e[1;34m \n\n *** Install FNM *** \e[0m"
-sudo pacman -S --noconfirm --needed unzip
-curl -fsSL https://fnm.vercel.app/install | sh -s -- --skip-shell
+echo -e "${stepcolor} \n\n *** Install Node Stable *** ${nocolor}"
+eval "`fnm env`"
+fnm install --lts
 
-// TODO Need to activate FNM before it can be used
-# Install current LTS Node
-#echo -e "\e[1;34m \n\n *** Install Node Stable *** \e[0m"
-#fnm install --lts
-
-# Enable virtualization service
+echo -e "${stepcolor} \n\n *** Enable startup services for installed apps *** ${nocolor}"
+# Virtualization
 sudo usermod -a -G libvirt $USER
 sudo systemctl enable --now libvirtd.service
 sudo systemctl enable --now virtlogd.service
-# Possibly needed to autostart network, but may not work here
-# sudo virsh net-autostart --network default
-
-# Enable Docker
+# Docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker.service
-
-# Enable printer services
+# Printer
 sudo systemctl enable --now cups
+
+# Virtualization network auto-start (might need work here yet)
+# sudo virsh net-autostart --network default
+
+# Add user to system group for printing. May not be necessary
 # sudo gpasswd -a $USER sys

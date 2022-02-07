@@ -1,19 +1,20 @@
 #!/bin/sh
 
-echo -e "\e[1;36m \n\n *** Baseline Update *** \e[0m"
-sudo pacman -Syu --noconfirm
+titlecolor="\e[0;31m"
+stepcolor="\e[1;34m"
+nocolor="\e[0m"
 
-echo -e "\e[1;36m \n\n *** Setup System *** \e[0m"
+echo -e "${titlecolor} \n\n *** Setup System *** ${nocolor}"
 sh ./scripts/manjaro/system.sh
 
-echo -e "\e[1;36m \n\n *** Setup Terminal *** \e[0m"
+echo -e "${titlecolor} \n\n *** Setup Terminal *** ${nocolor}"
 sh ./scripts/manjaro/terminal.sh
 
-echo -e "\e[1;36m \n\n *** Install Apps *** \e[0m"
+echo -e "${titlecolor} \n\n *** Install Apps *** ${nocolor}"
 sh ./scripts/manjaro/apps.sh
 
-echo -e "\e[1;36m \n\n *** Uninstall some default Apps *** \e[0m"
+echo -e "${titlecolor} \n\n *** Uninstall some default Apps *** ${nocolor}"
 sh ./scripts/manjaro/debloat.sh
 
-echo -e "\e[1;36m \n\n *** Setup looks *** \e[0m"
+echo -e "${titlecolor} \n\n *** Setup looks *** ${nocolor}"
 sh ./scripts/manjaro/looks.sh

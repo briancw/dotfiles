@@ -1,9 +1,13 @@
 #!/bin/sh
 
-# Create Projects Dir
-echo -e "\e[1;34m \n\n *** Make Projects Folder *** \e[0m"
-mkdir ~/Projects
+stepcolor="\e[1;34m"
+nocolor="\e[0m"
 
-# Setup makepkg
-echo -e "\e[1;34m \n\n *** Install makepkg dependencies *** \e[0m"
+echo -e "${stepcolor} \n\n *** Baseline Update *** ${nocolor}"
+sudo pacman -Syu --noconfirm
+
+echo -e "${stepcolor} \n\n *** Install makepkg dependencies *** ${nocolor}"
 sudo pacman -S --noconfirm --needed base-devel
+
+echo -e "${stepcolor} \n\n *** Make Projects Folder *** ${nocolor}"
+mkdir ~/Projects
