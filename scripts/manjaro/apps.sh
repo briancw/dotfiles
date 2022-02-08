@@ -10,25 +10,25 @@ curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | gpg -
 
 echo -e "${stepcolor} \n\n *** Install Apps from pacman *** ${nocolor}"
 sudo pacman -S --noconfirm --needed \
-brave-browser \
-vivaldi \
-code \
-mpv \
+cups print-manager system-config-printer \
+dog \
+docker \
 freecad \
 qemu virt-manager vde2 bridge-utils openbsd-netcat edk2-ovmf swtpm \
+vivaldi \
+mpv \
 peek \
-cups print-manager system-config-printer \
 skanlite \
 tmux \
-dog \
 python-pip \
-docker \
 filelight \
 obs-studio
+# brave-browser \
 
 echo -e "${stepcolor} \n\n *** Install Apps from AUR *** ${nocolor}"
-pamac build --no-firm \
+pamac build --no-confirm \
 skanpage \
+visual-studio-code-bin \
 github-desktop-bin \
 1password \
 mullvad-vpn-bin \
