@@ -18,3 +18,6 @@ sh ./scripts/manjaro/debloat.sh
 
 echo -e "${titlecolor} \n\n *** Setup looks *** ${nocolor}"
 sh ./scripts/manjaro/looks.sh
+
+echo -e "${titlecolor} \n\n *** Run zsh init last *** ${nocolor}"
+sh ./scripts/manjaro/zsh-init.sh

@@ -22,6 +22,7 @@ skanlite \
 tmux \
 python-pip \
 filelight \
+signal-desktop \
 obs-studio
 # brave-browser \
 
