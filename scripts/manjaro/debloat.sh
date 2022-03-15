@@ -8,4 +8,5 @@ echo -e "${stepcolor} \n\n *** Uninstall apps *** ${nocolor}"
 sudo pacman --noconfirm -Rncs \
 kate \
 firefox \
-oxygen oxygen-icons
+oxygen \
+oxygen-icons

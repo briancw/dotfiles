@@ -7,4 +7,4 @@ nocolor="\e[0m"
 echo -e "${stepcolor} \n\n *** Install konsave *** ${nocolor}"
 python3 -m pip install konsave
 
-sudo pacman -S latte-dock --noconfirm
+# sudo pacman -S latte-dock --noconfirm

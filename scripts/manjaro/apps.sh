@@ -23,7 +23,12 @@ tmux \
 python-pip \
 filelight \
 signal-desktop \
-obs-studio
+obs-studio \
+etcher \
+discord \
+docker \
+docker-compose
+# ttf-liberation
 # brave-browser \
 
 echo -e "${stepcolor} \n\n *** Install Apps from AUR *** ${nocolor}"
@@ -35,6 +40,9 @@ github-desktop-bin \
 mullvad-vpn-bin \
 spotify \
 fnm-bin
+
+echo -e "${stepcolor} \n\n *** Add user to docker group *** ${nocolor}"
+sudo usermod -aG docker $USER
 
 echo -e "${stepcolor} \n\n *** Install Node Stable *** ${nocolor}"
 eval "`fnm env`"

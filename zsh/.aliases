@@ -17,7 +17,8 @@ alias cpssh='cat ~/.ssh/id_ed25519.pub | pbcopy && cat ~/.ssh/id_ed25519.pub'
 alias cpsshgen='echo "ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519"'
 
 # Docker
-alias dup='docker-compose up -d'
+alias dup='docker-compose up'
+alias dupd='docker-compose up -d'
 alias ddown='docker-compose down'
 
 # Undo a `git push`

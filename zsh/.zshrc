@@ -78,10 +78,13 @@ source ~/.zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme
 # Load Aliases
 source ~/.aliases
 
-# Theming section  
+# Theming section
 autoload -U colors zcalc
 colors
 # File and Dir colors for ls and other outputs
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
+
+# Pyenv
+eval "$(pyenv init -)"
