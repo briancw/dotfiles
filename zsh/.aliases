@@ -1,4 +1,3 @@
-# Aliases
 # Navigation
 alias cdp="cd ~/Projects/"
 
@@ -12,18 +11,13 @@ alias nssh="nano ~/.ssh/config"
 # alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias publicip="curl icanhazip.com"
 
-# Copy my ssh pub key
-alias cpssh='cat ~/.ssh/id_ed25519.pub | pbcopy && cat ~/.ssh/id_ed25519.pub'
-alias cpsshgen='echo "ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519"'
-
 # Docker
-alias dup='docker-compose up'
+alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
 alias dupd='docker-compose up -d'
 alias ddown='docker-compose down'
-
-# Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
+alias dlog="docker compose logs -f"
+alias dre="docker compose down && docker compose down && docker compose up -d && docker compose logs -f"
 
 # Misc
-alias restartbrowser="adb shell am force-stop com.oculus.browser"
 alias npmlsg="npm ls -g --depth=0"
+alias dfh="duf --hide-fs tmpfs,devtmpfs,vfat"
