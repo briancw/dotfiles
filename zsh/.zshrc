@@ -42,12 +42,6 @@ HISTSIZE=10000
 SAVEHIST=1000
 bindkey -e
 
-# Path
-path+=("$HOME/.local/bin")
-
-# Oh my posh
-eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh/zen.toml)"
-
 # Colors
 autoload -U colors
 colors
@@ -90,4 +84,11 @@ function zle-line-finish () {echoti rmkx}
 zle -N zle-line-init
 zle -N zle-line-finish
 
+# Path
+path+=("$HOME/.local/bin")
+
+# aliases
 source "$HOME/.aliases"
+
+# Oh my posh
+eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh/zen.yaml)"
