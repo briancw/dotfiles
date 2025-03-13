@@ -86,9 +86,16 @@ zle -N zle-line-finish
 
 # Path
 path+=("$HOME/.local/bin")
+path+=("$HOME/.bun")
+path+=("$HOME/.bun/bin")
+path+=("$HOME/go/bin")
+eval "$(fnm env --shell zsh)"
 
 # aliases
 source "$HOME/.aliases"
 
 # Oh my posh
 eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh/zen.yaml)"
+
+# editor
+export EDITOR=nano
