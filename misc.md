@@ -1,0 +1,1 @@
+echo -e "[defaults]\nntfs_defaults=uid=$UID,gid=$GID\nntfs_allow=uid=$UID,gid=$GID,umask,dmask,fmask,locale,norecover,ignore_case,compression,nocompression,big_writes,nls,nohidden,sys_immutable,sparse,showmeta,prealloc" | sudo tee -a /etc/udisks2/mount_options.conf
