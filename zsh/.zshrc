@@ -99,3 +99,6 @@ eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh/zen.yaml)"
 
 # editor
 export EDITOR=nano
+
+# bun completions
+[ -s "/home/brian/.bun/_bun" ] && source "/home/brian/.bun/_bun"
